@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Spring Boot JAR
         run: |
-          ./springboot/app/.mvnw clean package -DskipTests
+          ./springboot/app/mvnw clean package -DskipTests
 
       - name: Build backend Docker image
         run: |
