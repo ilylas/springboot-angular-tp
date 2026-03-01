@@ -18,13 +18,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      #- name: Make Maven wrapper executable
+        #run: chmod +x ./springboot/app/mvnw
 
-      - name: Make Maven wrapper executable
-        run: chmod +x ./springboot/app/mvnw
-
-      - name: Build Spring Boot JAR
-        run: |
-          ./springboot/app/mvnw clean package -DskipTests
+      #- name: Build Spring Boot JAR
+        #run: |
+          #./springboot/app/mvnw clean package -DskipTests
 
       - name: Build backend Docker image
         run: |
